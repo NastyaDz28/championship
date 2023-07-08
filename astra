@@ -1,0 +1,33 @@
+ASTRA
+
+1. Обновление конфигураций
+cd /home/astra/Desktop/vmware-tools-destrib
+./vmware-install.pl
+
+2. Astra-client
+apt update
+nmtui
+nano /etc/hosts
+apt install fly-admin-ad-client
+
+
+2. IWTM
+nmtui
+nano /etc/hosts
+cd ~ 
+mkdir /opt/repo/4 папки
+cp -r /media/cdrom0/* /opt/repo/папка
+(в 4 папки с подключением адаптеров: 1 - осн диск,обновл, девел, обн девел)
+nano /etc/apt/sources.list
+apt update
+apt dist-upgrade
+переносим файл установщик
+sudo bash .run
+
+
+
+3. ssh (перед переносом установщика)
+sudo ssh install
+sudo systemctl enable ssh
+sudo systemctl start ssh
+sudo systemctl status ssh
