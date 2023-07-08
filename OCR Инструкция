@@ -1,0 +1,24 @@
+Задание 2
+Для сработки политик на сканированные файлы необходимо включение и настройка технологии OCR.
+
+
+1. подключаемся по ssh к IWTM
+2. nano /opt/iw/tm5/etc/warpd.conf
+Enable OCR true
+3. nano  --||-- /sample_compiler.conf
+Enable OCR true
+4. nano --||-- /config-perm/bookworm/ocr_custom.xml
+ocr_enable true
+5. cd /opt/iw/tm5/bin
+6. mc
+7. @iw_image2text (удаление ссылки F8)
+8. cd..
+nano .../image2text_fre.conf
+pwd: (из файла)
+SerNum:
+9. Создание ссылки
+ln -s /opt/iw/tm5/bin/iw_image2text_fre /opt/iw/tm5/bin/iw_image2text
+10. Лицензия SWPO перенести
+11. cp /home/iwtm-admin/SWPO... /var/lib/ABBYY/SDK/11/Licenses/
+12. chown iwtm-admin:iwtm-admin /var/lib/ABBYY/SDK/11/Licenses/SWPO...
+13. systemctl restart iw_warpd
