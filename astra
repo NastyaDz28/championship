@@ -18,11 +18,11 @@ cd ~
 mkdir /opt/repo/4 папки
 cp -r /media/cdrom0/* /opt/repo/папка
 (в 4 папки с подключением адаптеров: 1 - осн диск,обновл, девел, обн девел)
-nano /etc/apt/sources.list
+nano /etc/apt/sources.list (file:///opt/depo/...)
 apt update
 apt dist-upgrade
 переносим файл установщик
-sudo bash .run
+sudo bash iwtm-installer.run
 
 
 
