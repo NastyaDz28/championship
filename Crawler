@@ -1,0 +1,9 @@
+1. Поключение к IWTM Putty
+cat /opt/iw/tm5/etc/consul/consul.json
+datacenter:
+encrypt:
+2. Token из WEB IWTM
+3. nano /opt/ie/tm5/etc/web.conf
+enabled 1
+4. iw_kicker restart
+
